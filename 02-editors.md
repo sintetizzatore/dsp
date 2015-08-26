@@ -67,5 +67,5 @@ What graphical editor will you use? How did you make your decision? What are som
 
 >> Useful shortcuts for Emacs:  C-x u (undo); C-g (cancel); C-s (search/incremental); M-% (replace); M-; (comment); C-d (delete character to right of cursor); M-d (delete one word to right of cursor); M-f or M-b (move forward/backward one word at a time); C-k (kill from cursor to end of line); C-y (undo a kill); C-x C-c (quit emacs)
 
->> Emacs customization is mostly through variables (customizable variables). This effects most behaviors. For fonts, colors and other text attributes, "faces" can be adjusted.  To alter either, the command is M-x customize.  
+Emacs customization is mostly through variables (customizable variables). This effects most behaviors. For fonts, colors and other text attributes, "faces" can be adjusted.  To alter either, the command is M-x customize.  
 ---
