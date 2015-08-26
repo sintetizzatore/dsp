@@ -55,7 +55,10 @@ What does `ls` do? What do `ls -a`, `ls -l`, and `ls -lh` do? What combinations 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+>> 'xargs' is a command you can use alongside other commands to ease or simplify the output. 
+
+>> Example: find tif files in a directory and get a list, -print0 required if any filenames have whitespace
+>> find ./images -name "*.tif" -print0 | xargs -0 ls
 
 ---
 
