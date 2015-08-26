@@ -31,8 +31,8 @@ Both Emacs and vim have built-in interactive tutorials that you can try.
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
+>> I'm using Emacs because you can run a Python interpreter to check out blips of code, it's an IDE, and because
+>> you can implement vim inside Emacs.
 ---
 
 
@@ -61,6 +61,8 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I'm going to stick with Emacs so I can go back and forth, graphical and non-graphical. 
 
+>> Cool features of Emacs:  ability to run a Python interpreter; you can code, edit, and manipulate source code like Git all
+>> in the same place; 
 ---
