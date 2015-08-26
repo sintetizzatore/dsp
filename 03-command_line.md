@@ -21,10 +21,15 @@ Make a cheat sheet for yourself: a list of at least **ten** commands and what th
 >> apropros, help (help)
 
 >> pushd, popd (switch between directories)
+
 >> ls (list directory)
+
 >> mv (move file)
+
 >> rm (remove file)
+
 >> cat (stream file)
+
 >> find, dir -r (find file)
 
 
