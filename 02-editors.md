@@ -31,8 +31,8 @@ Both Emacs and vim have built-in interactive tutorials that you can try.
 
 What terminal editor will you use? How did you make your decision?
 
->> I'm using Emacs because you can run a Python interpreter to check out blips of code, it's an IDE, and because
->> you can implement vim inside Emacs.
+>> I'm using Emacs because you can run a Python interpreter to check out blips of code, it's an IDE, and because you can implement vim inside Emacs.
+
 ---
 
 
