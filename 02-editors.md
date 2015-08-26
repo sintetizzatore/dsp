@@ -63,6 +63,9 @@ What graphical editor will you use? How did you make your decision? What are som
 
 >> I'm going to stick with Emacs so I can go back and forth, graphical and non-graphical. 
 
->> Cool features of Emacs:  ability to run a Python interpreter; you can code, edit, and manipulate source code like Git all
->> in the same place; 
+>> Cool features of Emacs:  ability to run a Python interpreter; you can code, edit, and manipulate source code like Git all in the same place; you can implement vim inside Emacs
+
+>> Useful shortcuts for Emacs:  C-x u (undo); C-g (cancel); C-s (search/incremental); M-% (replace); M-; (comment); C-d (delete character to right of cursor); M-d (delete one word to right of cursor); M-f or M-b (move forward/backward one word at a time); C-k (kill from cursor to end of line); C-y (undo a kill); C-x C-c (quit emacs)
+
+>> Emacs customization is mostly through variables (customizable variables). This effects most behaviors. For fonts, colors and other text attributes, "faces" can be adjusted.  To alter either, the command is M-x customize.  
 ---
