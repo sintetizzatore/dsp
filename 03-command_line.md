@@ -12,9 +12,17 @@ these in a couple of hours.
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do, focused on things that are new, interesting, or otherwise worth remembering.
 
-> > $ less ex12.txt
-> > [displays file here]
-> > $
+>> less/more (view a file)
+>> ls *.txt (wildcard matching)
+>> grep, select-string (typing text into a file quickly)
+>> apropros, help (help)
+>> pushd, popd (switch between directories)
+>> ls (list directory)
+>> mv (move file)
+>> rm (remove file)
+>> cat (stream file)
+>> find, dir -r (find file)
+
 
 ---
 
