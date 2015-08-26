@@ -69,5 +69,5 @@ What graphical editor will you use? How did you make your decision? What are som
 
 >> Emacs customization is mostly through variables (customizable variables). This effects most behaviors. For fonts, colors and other text attributes, "faces" can be adjusted.  To alter either, the command is M-x customize.  
 
-Emacs customization is mostly through variables (customizable variables). This effects most behaviors. For fonts, colors and other text attributes, "faces" can be adjusted.  To alter either, the command is M-x customize.  
+
 ---
