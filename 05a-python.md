@@ -51,6 +51,7 @@ How are Python lists and sets similar and different? Give examples of using both
 >> Here, sets performed much faster since they were created differently from lists for exactly such a reason.
 
 
+
 >> A quick summary of best use cases for lists and sets:
 
 >> Lists: for ordered data, mixed collection of data in a central place, mutability required, no need for data indexing by custom value, no need for stack or queue, and when data doesn't need to be unique.
