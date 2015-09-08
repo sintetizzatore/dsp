@@ -22,7 +22,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 >> Values in a tuple should express different concepts, but values in a list should all express the same concept or belong to the same category.
 
->> Tuples are usable as dictionary keys, but lists aren't. Basically, an object must suppor the hash function and lists can't do this. Lists are containers and other operations treat them like containers. Hashing lists by id could produce errors in instances where different lists have the same content or would produce a KeyError. Lists can be hashed by contents like tuples, but the errors would occur because of the mutability property of lists themselves.
+>> Tuples are usable as dictionary keys, but lists aren't. Basically, an object must support the hash function and lists can't do this. Lists are containers and other operations treat them like containers. Hashing lists by id could produce errors in instances where different lists have the same content or would produce a KeyError. Lists can be hashed by contents like tuples, but the errors would occur because of the mutability property of lists themselves.
 
 ---
 
@@ -30,7 +30,10 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists and sets are only made up of values, but sets require hashable items (lists don't). Lists maintain the order of items and sets don't.
+>> Duplicate items aren't allowed with sets, but can exist within lists.
+
+>> Performance with sets is much quicker when looking for an element because the hash lookup is used, since sets only allow hashable items.
 
 ---
 
