@@ -66,7 +66,7 @@ How are Python lists and sets similar and different? Give examples of using both
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
 >> In Python, Lambda is a construct that allows for fuctions that aren't bound to a name (anonymous functions).
->> It's often used with common functional concepts such as map(), reduce(), or filter(). An example from secnetix.de illustrates the difference between lambda as a normal function definition ("f") and a lambda function ("g"):
+>> It's often used with common functional concepts such as map(), reduce(), sorted (), or filter(). An example from secnetix.de illustrates the difference between lambda as a normal function definition ("f") and a lambda function ("g"):
 
 	def f (x): return x**2
 	...
@@ -98,6 +98,13 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 	
 >> Basically, lambda isn't absolutely necessary, but provides a convenience in certain situations. A couple good points about using lambda: "if it doesn't return a value, it isn't an expression and can't be put into a lambda."
 >> and "if you can imagine it in an assignment statement, on the right-hand side of the equals sign, it is an expression and can be put into a lambda." (https://pythonconquerstheuniverse.wordpress.com)
+
+>> If we needed to sort a group of words, both upper and lower case, and we wanted to lowercase before sorting, instead of creating a separate function for both actions, we could inline lambda into a sorted() expression (where word is defined in the lowercase function):
+
+	sorted(['Blue', 'green', 'yellow', 'tangerine'], key=lambda word: word.lower())
+	['tangerine', 'Blue', 'yellow', 'green']
+	
+>> 
 
 
 ---
