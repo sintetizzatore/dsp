@@ -77,7 +77,7 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 	print g(8)
 	64
 	
->> Lambda can be used anywhere a function is expected, and it doesn't have to be assigned to a variable.
+>> Lambda can be used anywhere a function is expected, and it doesn't have to be assigned to a variable. And, with lambda, the return statement is implicit.
 >> Some users point out lambda being more useful that a typical function when developing GUIs with Python. For example, if you're creating
 >> several buttons, you can use a single parameterized callback instead of a unique callback per button:
 
@@ -96,7 +96,10 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 	# Call plural rule #1 with argument 4 to find out which sentence form to use.
 	plural_rule[1](4) # returns 'plural'
 	
->> 
+>> Basically, lambda isn't absolutely necessary, but provides a convenience in certain situations. A couple good points about using lambda: "if it doesn't return a value, it isn't an expression and can't be put into a lambda."
+>> and "if you can imagine it in an assignment statement, on the right-hand side of the equals sign, it is an expression and can be put into a lambda." (https://pythonconquerstheuniverse.wordpress.com)
+
+
 ---
 
 ###Q4. List Comprehension, Map &amp; Filter
