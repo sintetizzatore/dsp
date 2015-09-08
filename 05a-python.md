@@ -104,8 +104,16 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 	sorted(['Blue', 'green', 'yellow', 'tangerine'], key=lambda word: word.lower())
 	['tangerine', 'Blue', 'yellow', 'green']
 	
->> 
+>> Or if we wanted to sort a list of names and associated ages, instead of a function like:
 
+	def compare_person(a):
+		return a.age
+
+	sorted(personArray, key=compare_person)
+	
+>> Instead we could write:
+
+	sorted(personArray, key=lambda a: a.age)
 
 ---
 
