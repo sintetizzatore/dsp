@@ -34,6 +34,29 @@ How are Python lists and sets similar and different? Give examples of using both
 >> Duplicate items aren't allowed with sets, but can exist within lists.
 
 >> Performance with sets is much quicker when looking for an element because the hash lookup is used, since sets only allow hashable items.
+>> Some stats from the site bogdan.org.ua include a 12% bump in speed when adding new items to lists versus sets:
+
+>> 	$python -mtimeit -s 'myset = set()' 'for x in xrange(1000): myset.add(x)'
+>> 	10000 loops, best of 3: 133 usec per loop
+>> 	$python -mtimeit -s 'tmp = list()' 'for x in xrange(1000): tmp.append(x)'
+>> 	loops, best of 3: 116 usec per loop
+
+>> The author does a speed comparison between lists and sets for membership testing also, using the following:
+
+>> 	$python -mtimeit -s 'tmp = set()' -s 'for x in xrange(1000): tmp.add(x)' 'for x in xrange(100000): x in tmp'
+>> 	100 loops, best of 3: 7.27 msec per loop
+>> 	$python -mtimeit -s 'tmp = list()' -s 'for x in xrange(1000): tmp.append(x)' 'for x in xrange(100000): x in tmp'
+>> 	10 loops, best of 3: 2.12 sec per loop
+
+>> Here, sets performed much faster since they were created differently from lists for exactly such a reason.
+
+
+>> A quick summary of best use cases for lists and sets:
+
+>> Lists: for ordered data, mixed collection of data in a central place, mutability required, no need for data indexing by custom value, no need for stack or queue, and when data doesn't need to be unique.
+
+>> Sets: unique set of data necessary, mutability required, values/items need to be manipulated mathematically (difference, union, intersection, etc), no need for nested lists, sets, or dictionaries (since sets don't support unhashable types). 
+
 
 ---
 
