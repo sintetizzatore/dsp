@@ -65,8 +65,38 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> In Python, Lambda is a construct that allows for fuctions that aren't bound to a name (anonymous functions).
+>> It's often used with common functional concepts such as map(), reduce(), or filter(). An example from secnetix.de illustrates the difference between lambda as a normal function definition ("f") and a lambda function ("g"):
 
+	def f (x): return x**2
+	...
+	print f(8)
+	64
+	
+	g = lambda x: x**2
+	print g(8)
+	64
+	
+>> Lambda can be used anywhere a function is expected, and it doesn't have to be assigned to a variable.
+>> Some users point out lambda being more useful that a typical function when developing GUIs with Python. For example, if you're creating
+>> several buttons, you can use a single parameterized callback instead of a unique callback per button:
+
+	for value in ["one", "two", "three"]:
+		b = tk.Button(label=value, command=lambda arg=value: my_callback(arg))
+		b.pack()
+		
+>> Another stackoverflow user finds it useful for a list of functions that do the same thing, but for different circumstances:
+
+	plural_rules = [
+		lambda n: 'all'
+		lambda n: 'singular' if n == 1 else 'plural',
+		lambda n: 'singular' if 0 <= n <= 1 else 'plural',
+		...
+	]
+	# Call plural rule #1 with argument 4 to find out which sentence form to use.
+	plural_rule[1](4) # returns 'plural'
+	
+>> 
 ---
 
 ###Q4. List Comprehension, Map &amp; Filter
