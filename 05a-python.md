@@ -154,7 +154,9 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 
 	map(lambda e: e**2, filter(lambda e: type(e) == types.IntType, a_list))
 	
->> COMPARE CAPABILTIES for map and filter
+>> Speed considerations seem minimal between using list comprehensions versus map() or filter() and lambda combos. Filtering seems optimal
+>> when we can avoid writing an expression twice and instead use filter against a post-computed value. Similar cases exist for map(), but 
+>> python programmers seem to debate map() and filter() being "unpythonic" versus comprehensions. 
 
 >> Set comprehensions are constructed similarly to list comprehensions. The writer at the site gives an example using a list of names.
 >> The list has names that differ in case, duplicates, and single character names. 
@@ -168,11 +170,18 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 
 	{ 'Bob', 'John', 'Alice' }
 	
->> This set comprehension will give us that set:
+>> This set comprehension will give us those results:
 
 	{ name[0].upper() + name[1:].lower() for name in names if len(name) > 1 }
 	
+>> And as an example of dictionary comprehension, if we had a dictionary of keys that are values and characters that map to the number
+>> times a character appears in a given text, where the dictionary denotes between upper and lower case, and we want the occurrences of
+>> upper and lower case characters are combined, we'd write:
 
+	mcase = {'a': 10, 'b': 34, 'A': 7, 'Z': 3}
+	mcase_frequency = { k.lower() : mcase.get(k.lower(), 0) + mcase.get(k.upper(), 0) for k in mcase.keys()
+	
+	# mcase_frequency == {'a': 17, 'z': 3, 'b': 34}
 	
 
 ---
