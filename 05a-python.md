@@ -154,10 +154,25 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 
 	map(lambda e: e**2, filter(lambda e: type(e) == types.IntType, a_list))
 	
->> COMPARE CAPABILTIES
+>> COMPARE CAPABILTIES for map and filter
 
->> 
+>> Set comprehensions are constructed similarly to list comprehensions. The writer at the site gives an example using a list of names.
+>> The list has names that differ in case, duplicates, and single character names. 
+>> We want to pull names longer than a single character and output them all in the same format (capitalized first character, others lowercase).
+
+>> Our list:
+
+	names = [ 'Bob', 'JOHN', 'alice', 'bob', 'ALICE', 'J', 'Bob' ]
 	
+>> So we're looking for this set:
+
+	{ 'Bob', 'John', 'Alice' }
+	
+>> This set comprehension will give us that set:
+
+	{ name[0].upper() + name[1:].lower() for name in names if len(name) > 1 }
+	
+
 	
 
 ---
