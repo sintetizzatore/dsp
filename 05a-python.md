@@ -138,6 +138,27 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 	input sequence >>> a_list
 	optional predicate >>> if type(e) == types.IntType
 	
+>> The iterator goes through each member 'e' of the input sequence "a_list." The predicate checks if members are integers.
+>> If the member is an integer then it passes through the output expression and is squared to become a member of the output list.
+
+>> The writer then shows how map, filter, and lambda can be used for the same results.
+>> The filter function applies a predicate to a sequence:
+
+	filter(lambda e: type(e) == types.IntType, a_list)
+	
+>> The map function modifies each member of the sequence:
+
+	map(lambda e: e**2, a_list)
+	
+>> Map and filter can be combined:
+
+	map(lambda e: e**2, filter(lambda e: type(e) == types.IntType, a_list))
+	
+>> COMPARE CAPABILTIES
+
+>> 
+	
+	
 
 ---
 
