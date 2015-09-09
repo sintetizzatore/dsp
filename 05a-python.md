@@ -121,7 +121,23 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> In Python, a comprehension is a construct that allows sequences to be built from other sequences. The components of a list comprehension are:
+>> input sequence, variable, predicate expression (optional), and output expression.  (http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Comprehensions.html)
+
+>> I like the example posted at the site above. It supposes we want to get a list of all the integers in a sequence and then square them:
+
+	a_list = [1, ‘4’, 9, ‘a’, 0, 4]
+	squared_ints = [ e**2 for e in a_list if type(e) == types.IntType ]
+	print squared_ints
+	# [ 1, 81, 0, 16 ]
+
+>> The writer breaks down the components of the comprehension:
+
+	output expression >>> e**2
+	variable >>> for e in a_list
+	input sequence >>> a_list
+	optional predicate >>> if type(e) == types.IntType
+	
 
 ---
 
