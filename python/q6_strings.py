@@ -56,6 +56,7 @@ print donuts(99)
 #    """
 #    raise NotImplementedError
 
+
 def both_ends(s):
 	if len(s) >= 2:
 		return s[0] + s[1] + s[-2] + s[-1]
@@ -68,24 +69,36 @@ print both_ends('a')
 print both_ends('xyz')
 
 
+#
+#
+#def fix_start(s):
+#    """
+#    Given a string s, return a string where all occurences of its
+#    first char have been changed to '*', except do not change the
+#    first char itself. e.g. 'babble' yields 'ba**le' Assume that the
+#    string is length 1 or more.
+#
+#    >>> fix_start('babble')
+#    'ba**le'
+#    >>> fix_start('aardvark')
+#    'a*rdv*rk'
+#    >>> fix_start('google')
+#    'goo*le'
+#    >>> fix_start('donut')
+#    'donut'
+#    """
+#    raise NotImplementedError
+
 
 def fix_start(s):
-    """
-    Given a string s, return a string where all occurences of its
-    first char have been changed to '*', except do not change the
-    first char itself. e.g. 'babble' yields 'ba**le' Assume that the
-    string is length 1 or more.
-
-    >>> fix_start('babble')
-    'ba**le'
-    >>> fix_start('aardvark')
-    'a*rdv*rk'
-    >>> fix_start('google')
-    'goo*le'
-    >>> fix_start('donut')
-    'donut'
-    """
-    raise NotImplementedError
+	firstchar = s[0]
+	newstr = s[1:].replace(firstchar, "*")
+	return firstchar + newstr
+		
+print fix_start('babble')
+print fix_start('aardvark')
+print fix_start('google')
+print fix_start('donut')
 
 
 def mix_up(a, b):
