@@ -37,24 +37,36 @@ print donuts(99)
 
 #
 #
+#
+# def both_ends(s):
+#    """
+#    Given a string s, return a string made of the first 2 and the last
+#    2 chars of the original string, so 'spring' yields 'spng'.
+#    However, if the string length is less than 2, return instead the
+#    empty string.
+#
+#    >>> both_ends('spring')
+#    'spng'
+#    >>> both_ends('Hello')
+#    'Helo'
+#    >>> both_ends('a')
+#    ''
+#    >>> both_ends('xyz')
+#    'xyyz'
+#    """
+#    raise NotImplementedError
 
 def both_ends(s):
-    """
-    Given a string s, return a string made of the first 2 and the last
-    2 chars of the original string, so 'spring' yields 'spng'.
-    However, if the string length is less than 2, return instead the
-    empty string.
+	if len(s) >= 2:
+		return s[0] + s[1] + s[-2] + s[-1]
+	else:
+		return ""
+		
+print both_ends('spring')
+print both_ends('Hello')
+print both_ends('a')
+print both_ends('xyz')
 
-    >>> both_ends('spring')
-    'spng'
-    >>> both_ends('Hello')
-    'Helo'
-    >>> both_ends('a')
-    ''
-    >>> both_ends('xyz')
-    'xyyz'
-    """
-    raise NotImplementedError
 
 
 def fix_start(s):
