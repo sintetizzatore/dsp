@@ -2,24 +2,41 @@
 # Licensed under the Apache License, Version 2.0
 
 
+#def donuts(count):
+#    """
+#   Given an int count of a number of donuts, return a string of the
+#   form 'Number of donuts: <count>', where <count> is the number
+#   passed in. However, if the count is 10 or more, then use the word
+#   'many' instead of the actual count.
+#
+#    >>> donuts(4)
+#    'Number of donuts: 4'
+#    >>> donuts(9)
+#    'Number of donuts: 9'
+#    >>> donuts(10)
+#    'Number of donuts: many'
+#    >>> donuts(99)
+#    'Number of donuts: many'
+#    """
+#    raise NotImplementedError
+#    
+#    
+
 def donuts(count):
-    """
-    Given an int count of a number of donuts, return a string of the
-    form 'Number of donuts: <count>', where <count> is the number
-    passed in. However, if the count is 10 or more, then use the word
-    'many' instead of the actual count.
+	if count < 10:
+		return "Number of donuts:" + str(count)
+	elif count >= 10:
+		return "Number of donuts: many"
+	else:
+		return "null"
+		
+print donuts(4)
+print donuts(9)
+print donuts(10)
+print donuts(99)
 
-    >>> donuts(4)
-    'Number of donuts: 4'
-    >>> donuts(9)
-    'Number of donuts: 9'
-    >>> donuts(10)
-    'Number of donuts: many'
-    >>> donuts(99)
-    'Number of donuts: many'
-    """
-    raise NotImplementedError
-
+#
+#
 
 def both_ends(s):
     """
