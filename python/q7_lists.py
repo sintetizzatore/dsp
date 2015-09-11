@@ -32,21 +32,37 @@ print match_ends(['aaa', 'be', 'abc', 'hello'])
 
 
 
-def front_x(words):
-    """
-    Given a list of strings, return a list with the strings in sorted
-    order, except group all the strings that begin with 'x' first.
-    e.g. ['mix', 'xyz', 'apple', 'xanadu', 'aardvark'] yields
-         ['xanadu', 'xyz', 'aardvark', 'apple', 'mix'].
+# def front_x(words):
+#    """
+#    Given a list of strings, return a list with the strings in sorted
+#    order, except group all the strings that begin with 'x' first.
+#    e.g. ['mix', 'xyz', 'apple', 'xanadu', 'aardvark'] yields
+#         ['xanadu', 'xyz', 'aardvark', 'apple', 'mix'].
+#
+#    >>> front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa'])
+#    ['xaa', 'xzz', 'axx', 'bbb', 'ccc']
+#    >>> front_x(['ccc', 'bbb', 'aaa', 'xcc', 'xaa'])
+#    ['xaa', 'xcc', 'aaa', 'bbb', 'ccc']
+#    >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
+#    ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
+#    """
+#    raise NotImplementedError
 
-    >>> front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa'])
-    ['xaa', 'xzz', 'axx', 'bbb', 'ccc']
-    >>> front_x(['ccc', 'bbb', 'aaa', 'xcc', 'xaa'])
-    ['xaa', 'xcc', 'aaa', 'bbb', 'ccc']
-    >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
-    ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
-    """
-    raise NotImplementedError
+
+def front_x(words):
+	r_list = []
+	s_list = []
+	for t in words:
+		if t.startswith('x'):
+			r_list.append(t)
+		else:
+			s_list.append(t)
+	return sorted(r_list) + sorted(s_list)
+		
+print front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa'])
+print front_x(['ccc', 'bbb', 'aaa', 'xcc', 'xaa'])
+print front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
+
 
 
 def sort_last(tuples):
