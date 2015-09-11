@@ -93,24 +93,37 @@ print sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
 
 
 
+# def remove_adjacent(nums):
+#    """
+#    Given a list of numbers, return a list where all adjacent equal
+#    elements have been reduced to a single element, so [1, 2, 2, 3]
+#    returns [1, 2, 3]. You may create a new list or modify the passed
+#    in list.
+#
+#    >>> remove_adjacent([1, 2, 2, 3])
+#    [1, 2, 3]
+#    >>> remove_adjacent([2, 2, 3, 3, 3])
+#    [2, 3]
+#    >>> remove_adjacent([3, 2, 3, 3, 3])
+#    [3, 2, 3]
+#    >>> remove_adjacent([])
+#    []
+#    """
+#    raise NotImplementedError
+
 
 def remove_adjacent(nums):
-    """
-    Given a list of numbers, return a list where all adjacent equal
-    elements have been reduced to a single element, so [1, 2, 2, 3]
-    returns [1, 2, 3]. You may create a new list or modify the passed
-    in list.
+	result = []
+	for num in nums:
+		if len(result) == 0 or num != result[-1]:
+			result.append(num)
+	return result
+	
+print remove_adjacent([1, 2, 2, 3])
+print remove_adjacent([2, 2, 3, 3, 3])
+print remove_adjacent([3, 2, 3, 3, 3])
 
-    >>> remove_adjacent([1, 2, 2, 3])
-    [1, 2, 3]
-    >>> remove_adjacent([2, 2, 3, 3, 3])
-    [2, 3]
-    >>> remove_adjacent([3, 2, 3, 3, 3])
-    [3, 2, 3]
-    >>> remove_adjacent([])
-    []
-    """
-    raise NotImplementedError
+
 
 
 def linear_merge(list1, list2):
