@@ -130,21 +130,36 @@ print mix_up('pezzy', 'firm')
 
 
 
-def verbing(s):
-    """
-    Given a string, if its length is at least 3, add 'ing' to its end.
-    Unless it already ends in 'ing', in which case add 'ly' instead.
-    If the string length is less than 3, leave it unchanged. Return
-    the resulting string.
+# def verbing(s):
+#   """
+#    Given a string, if its length is at least 3, add 'ing' to its end.
+#    Unless it already ends in 'ing', in which case add 'ly' instead.
+#    If the string length is less than 3, leave it unchanged. Return
+#    the resulting string.
+#
+#    >>> verbing('hail')
+#    'hailing'
+#    >>> verbing('swiming')
+#    'swimingly'
+#    >>> verbing('do')
+#    'do'
+#    """
+#    raise NotImplementedError
 
-    >>> verbing('hail')
-    'hailing'
-    >>> verbing('swiming')
-    'swimingly'
-    >>> verbing('do')
-    'do'
-    """
-    raise NotImplementedError
+
+def verbing(s):
+    if len(s) < 3:
+        return s
+    elif s.endswith('ing'):
+        return s + 'ly'
+    else:
+        return s + 'ing'
+        
+print verbing('hail')
+print verbing('swimming')
+print verbing('do')
+
+
 
 
 def not_bad(s):
