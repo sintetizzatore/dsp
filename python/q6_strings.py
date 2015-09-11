@@ -162,24 +162,39 @@ print verbing('do')
 
 
 
-def not_bad(s):
-    """
-    Given a string, find the first appearance of the substring 'not'
-    and 'bad'. If the 'bad' follows the 'not', replace the whole
-    'not'...'bad' substring with 'good'. Return the resulting string.
-    So 'This dinner is not that bad!' yields: 'This dinner is
-    good!'
+#def not_bad(s):
+#    """
+#    Given a string, find the first appearance of the substring 'not'
+#    and 'bad'. If the 'bad' follows the 'not', replace the whole
+#    'not'...'bad' substring with 'good'. Return the resulting string.
+#    So 'This dinner is not that bad!' yields: 'This dinner is
+#    good!'
+#
+#    >>> not_bad('This movie is not so bad')
+#    'This movie is good'
+#    >>> not_bad('This dinner is not that bad!')
+#    'This dinner is good!'
+#    >>> not_bad('This tea is not hot')
+#    'This tea is not hot'
+#    >>> not_bad("It's bad yet not")
+#    "It's bad yet not"
+#    """
+#    raise NotImplementedError
 
-    >>> not_bad('This movie is not so bad')
-    'This movie is good'
-    >>> not_bad('This dinner is not that bad!')
-    'This dinner is good!'
-    >>> not_bad('This tea is not hot')
-    'This tea is not hot'
-    >>> not_bad("It's bad yet not")
-    "It's bad yet not"
-    """
-    raise NotImplementedError
+
+def not_bad(s):
+	x = s.split("bad")
+	y = x[0].split("not")
+	if len(x) > 1 < len(y):
+		return y[0] + "good" + "bad".join(x[1:])
+	return s
+	
+print not_bad('This movie is not so bad')
+print not_bad('This dinner is not that bad!')
+print not_bad('This tea is not hot')
+print not_bad("It's bad yet not")
+
+
 
 
 def front_back(a, b):
