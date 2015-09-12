@@ -7,8 +7,9 @@
 
 import csv
 
-  def read_data(data):
-   # COMPLETE THIS FUNCTION
+def read_data(data):
+	with open(data) as f:
+		return [row for row in csv.DictReader(f)]
 
   def get_min_score_difference(self, parsed_data):
     # COMPLETE THIS FUNCTION
@@ -17,7 +18,7 @@ import csv
     # COMPLETE THIS FUNCTION
     
     
-# This doesn't complete functions above, but does answer the challenge:
+# This is a different route using mapreduce
 
 import csv
 
