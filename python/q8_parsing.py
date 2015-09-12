@@ -21,17 +21,17 @@ import csv
 
 import csv
 
-def read_all(fname):
-	with open(fname) as f:
+def read_data(data):
+	with open(data) as f:
 		return [row for row in csv.DictReader(f)]
-
-def mapreduceextract(data, mapreduce, extractor):
-	row = mapreduce(data)
+		
+def get_min_score_difference(self, mapreduce, extractor):
+	row = mapreduce(self)
 	return extractor(row)
-
-def thisextract(fname, fdiff1, fdiff2, freport):
-	data = read_all(fname)
-	return mapreduceextract(data, lambda array: min(array, key=lambda x: abs(int(x[fdiff1]) - int(x[fdiff2]))), lambda row: row[freport])
-        
+	
+def get_team(data, fdiff1, fdiff2, goal):
+	self = read_data(data)
+	return get_min_score_difference(self, lambda array: min(array, key=lambda x: abs(int(x[fdiff1]) - int(x[fdiff2]))), lambda row: row[goal])
+	
 if __name__ == '__main__':
-	print(thisextract('football.csv', 'Goals', 'Goals Allowed', 'Team'))
+	print(get_team('football.csv', 'Goals', 'Goals Allowed', 'Team'))
