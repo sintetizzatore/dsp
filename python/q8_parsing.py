@@ -15,3 +15,23 @@ import csv
 
   def get_team(self, index_value, parsed_data):
     # COMPLETE THIS FUNCTION
+    
+    
+# This doesn't complete functions above, but does answer the challenge:
+
+import csv
+
+def read_all(fname):
+	with open(fname) as f:
+		return [row for row in csv.DictReader(f)]
+
+def mapreduceextract(data, mapreduce, extractor):
+	row = mapreduce(data)
+	return extractor(row)
+
+def thisextract(fname, fdiff1, fdiff2, freport):
+	data = read_all(fname)
+	return mapreduceextract(data, lambda array: min(array, key=lambda x: abs(int(x[fdiff1]) - int(x[fdiff2]))), lambda row: row[freport])
+        
+if __name__ == '__main__':
+	print(thisextract('football.csv', 'Goals', 'Goals Allowed', 'Team'))
