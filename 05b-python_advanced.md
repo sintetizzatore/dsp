@@ -8,7 +8,7 @@ The data file represents the [Biostats Faculty List at University of Pennsylvani
 
 This data is available in this file:  [faculty.csv](python/faculty.csv)
 
---- 
+---
 
 ###Part I - Regular Expressions  
 
@@ -16,7 +16,7 @@ Use regular expressions to:
 
 ####Q1. Find how many different degrees there are, and their frequencies: Ex:  PhD, ScD, MD, MPH, BSEd, MS, JD, etc.
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> phd (31); scd (6); mph (2); ms (2); 0 (1); bsed (1); jd (1); ma (1); md (1)
 
 
 ####Q2. Find how many different titles there are, and their frequencies:  Ex:  Assistant Professor, Professor
@@ -92,9 +92,8 @@ Print the first 3 key and value pairs of the dictionary:
 
 Place your code in this file: [advanced_python_dict.py](python/advanced_python_dict.py)
 
---- 
+---
 
 If you're all done and looking for an extra challenge, then try the below problem:  
 
 ### [Markov](python/markov.py) (Optional)
-
