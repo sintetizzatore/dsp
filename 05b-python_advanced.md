@@ -32,7 +32,7 @@ Use regular expressions to:
 
 ####Q4. Find how many different email domains there are (Ex:  mail.med.upenn.edu, upenn.edu, email.chop.edu, etc.).  Print the list of unique email domains.
 
->> @mail.med.upenn.edu (23); @upenn.edu (12); @mail.chop.edu (1); @cceb.med.upenn.edu (1); 
+>> @mail.med.upenn.edu (23); @upenn.edu (12); @mail.chop.edu (1); @cceb.med.upenn.edu (1);
 
 Place your code in this file: [advanced_python_regex.py](python/advanced_python_regex.py)
 
@@ -50,7 +50,7 @@ bellamys@mail.med.upenn.edu
 warren@upenn.edu
 bryanma@upenn.edu
 ```
-
+>> UPDATED
 ---
 
 ### Part III - Dictionary
