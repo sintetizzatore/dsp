@@ -50,7 +50,7 @@ bellamys@mail.med.upenn.edu
 warren@upenn.edu
 bryanma@upenn.edu
 ```
->> UPDATED
+>> updated
 ---
 
 ### Part III - Dictionary
