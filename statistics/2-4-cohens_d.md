@@ -2,7 +2,7 @@
 
 >> REPLACE THIS TEXT WITH YOUR RESPONSE
 
-firsts = df[df.birthord==1]
+>>firsts = df[df.birthord==1]
 others = df[df.birthord>1]
 
 def CohenEffectSize(firsts, others):
